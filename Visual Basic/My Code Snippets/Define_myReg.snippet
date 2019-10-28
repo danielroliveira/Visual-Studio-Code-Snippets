@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define Nova Regiao</Title>
+      <Author>Daniel Oliveira</Author>
+      <Description>Define uma Nova Regiao.</Description>
+      <Shortcut>myreg</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>Nome</ID>
+          <Type>String</Type>
+          <ToolTip>Coloque o nome da Região.</ToolTip>
+          <Default>NOVA REGIAO</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA['
+#Region "$Nome$"
+
+#End Region '/ $Nome$
+']]></Code>
+
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

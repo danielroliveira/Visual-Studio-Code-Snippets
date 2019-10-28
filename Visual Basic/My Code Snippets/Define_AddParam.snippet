@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Inserir Parametro</Title>
+      <Author>DanielROliveira</Author>
+      <Description>Inserir um novo Parametro</Description>
+      <Shortcut>AddParam</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Object>
+          <ID>Propriedade</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with Propriedade.</ToolTip>
+          <Default>DataVariable</Default>
+        </Object>
+        <Literal>
+          <ID>VariavelClasse</ID>
+          <Type>String</Type>
+          <ToolTip>Variavel da Classe.</ToolTip>
+          <Default>_classe</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl">
+        <![CDATA[bd.AdicionarParametros("@$Propriedade$", $VariavelClasse$.$Propriedade$)]]>
+	  </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Define a Classe Property</Title>
+      <Author>Daniel Oliveira</Author>
+      <Description>Define uma Property de uma Classe.</Description>
+      <Shortcut>PropA</Shortcut>
+    </Header>
+    <Snippet>
+      <Declarations>
+        <Literal>
+          <ID>PropertyName</ID>
+          <Type>String</Type>
+          <ToolTip>Replace with property name.</ToolTip>
+          <Default>NewProperty</Default>
+        </Literal>
+        <Literal>
+          <ID>PropertyType</ID>
+          <Type></Type>
+          <ToolTip>Replace with the property type.</ToolTip>
+          <Default>String</Default>
+        </Literal>
+        <Literal>
+          <ID>StructureData</ID>
+          <Type>Object</Type>
+          <ToolTip>Nome dos Dados Strutucture.</ToolTip>
+          <Default>XData</Default>
+        </Literal>
+      </Declarations>
+      <Code Language="VB" Kind="method decl"><![CDATA['
+'--- Propriedade $PropertyName$
+'------------------------------------------------------
+Public Property $PropertyName$() As $PropertyType$
+    Get
+        Return $StructureData$._$PropertyName$
+    End Get
+    Set(ByVal value As $PropertyType$)
+		If value <> $StructureData$._$PropertyName$ Then
+			RaiseEvent AoAlterar()
+		End If
+		$StructureData$._$PropertyName$ = value
+    End Set
+End Property]]></Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
